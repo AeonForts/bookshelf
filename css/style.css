@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    gap: 10px;
+    background: #579BB1;
+    padding: 10px;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+header img {
+    height: 80px;
+    
+}
+
+.wrapper {
+    display: flex;
+
+    align-items: center;
+
+}
+
+.wrapper .container {
+    width: 600px;
+    border-radius: 8px;
+    margin: 16px;
+    background: #F8F9FA;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.wrapper section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 345px;
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.3s ease-in-out; 
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10px; 
+    background-color: #579BB1; 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.item:hover::before {
+    transform: scaleX(1); 
+}
+.item:hover {
+    transform: translateX(10px); 
+    
+}
+
+.item > .inner h2 {
+    margin-bottom: unset;
+}
+
+.item > .inner p {
+    margin-top: 5px;
+}
+
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    height: auto;
+    border-radius: 16px;
+    gap: 20px;
+}
+
+.row{
+    justify-content: space-evenly;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.relative {
+    position: relative;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+input[type=text], input[type=date], input[type=number] {
+    font-family: Raleway, sans-serif;
+    background: #F5F1FF;
+    border: 2px solid #9BB8CD;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.btn-submit {
+    width: 100%;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 12px 24px;
+    border: 2px solid #9BB8CD;
+    color: black;
+    font-size: 24px;
+    margin-top: auto;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #9BB8CD;
+    color: white;
+}
+
+input[type=text], input[type=date], .btn-submit:focus {
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+.color-beige {
+    color: #E1D7C6;
+}
+
+.check-button {
+    width: 80px;
+    height: 40px;
+
+
+    margin-left: auto;
+    cursor: pointer;
+    border-color: #739072;
+}
+
+.check-button:hover {
+    background-color: #739072;
+    color: white;
+}
+
+.trash-button {
+    width: 80px;
+    height: 40px;
+
+
+    margin-left: 16px;
+    cursor: pointer;
+    border-color: #BF3131;
+    
+}
+
+.trash-button:hover {
+    background-color: #BF3131;
+    color: white;
+}
+
+.undo-button {
+        width: auto;
+    height: 40px;
+
+
+    margin-left: auto;
+    cursor: pointer;
+    border-color: #739072;
+}
+
+.undo-button:hover {
+    background-color: #739072;
+    color: white;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    .wrapper section{
+        width: 100%;
+    }
+
+    .wrapper {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .wrapper .container {
+        width: auto;
+        gap: 10px;
+
+
+    }
+
+    .list-item {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
